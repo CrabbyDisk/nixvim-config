@@ -18,5 +18,7 @@
     };
 
     which-key.enable = true;
+
+    indent-blankline.enable = true;
   };
 }
