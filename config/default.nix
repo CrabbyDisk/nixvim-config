@@ -16,5 +16,11 @@
     settings.flavour = "mocha";
   };
 
+  opts = {
+      number = true;         # Show line numbers
+
+      shiftwidth = 2;        # Tab width should be 2
+    };
+
 
 }
