@@ -6,7 +6,15 @@
       rust_analyzer.installCargo = false;
       rust_analyzer.installRustc = false;
 
-      nil_ls.enable = true;
+      nixd = {
+        enable = true;
+        settings = {
+          formatting.command = [ "nixpkgs-fmt" ];
+          options = {
+            nixos.expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.good-pc.options";
+          };
+        };
+      };
     };
   };
 
