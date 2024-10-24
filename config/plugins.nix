@@ -22,5 +22,7 @@
     indent-blankline.enable = true;
 
     presence-nvim.enable = true;
+
+    nvim-autopairs.enable = true;
   };
 }
