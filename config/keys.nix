@@ -21,5 +21,6 @@
       key = "<leader>g";
       action = "+git";
     }
+
   ];
 }
