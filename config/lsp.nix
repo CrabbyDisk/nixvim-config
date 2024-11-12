@@ -6,6 +6,8 @@
       rust_analyzer.installCargo = false;
       rust_analyzer.installRustc = false;
 
+      glsl_analyzer.enable = true;
+
       nixd = {
         enable = true;
         settings = {
@@ -33,6 +35,7 @@
     settings.snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
     settings.mapping = {
       "<CR>" = "cmp.mapping.confirm({ select = true })";
+
       "<Tab>" = ''cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -42,6 +45,7 @@
         fallback()
       end
     end, { "i", "s" })'';
+
       "<S-Tab>" = ''cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
@@ -52,5 +56,6 @@
       end
     end, { "i", "s" })'';
     };
+
   };
 }
